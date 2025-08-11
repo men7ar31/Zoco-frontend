@@ -1,0 +1,30 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* tu fondo y clases glass… */
+@layer base {
+  html { color-scheme: light; }
+  body {
+    @apply text-zinc-800 min-h-screen;
+    background: radial-gradient(1200px 800px at 10% 10%, #b3e5ff 0%, transparent 40%),
+                radial-gradient(1000px 700px at 90% 20%, #e3baff 0%, transparent 45%),
+                radial-gradient(900px 700px at 30% 90%, #b2f5ea 0%, transparent 40%),
+                linear-gradient(135deg, #eef2ff 0%, #e0f7ff 50%, #e7fff8 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/30 backdrop-blur-xl border border-white/40
+           shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] rounded-2xl;
+  }
+  .glass-input {
+    @apply bg-white/40 backdrop-blur-md border border-white/60 rounded-xl
+           px-3 py-2 text-zinc-800 placeholder-zinc-500
+           focus:outline-none focus:ring-2 focus:ring-cyan-400/60;
+  }
+  .glass-card-title {
+    @apply text-[22px] font-semibold text-zinc-800;
+  }
+}
