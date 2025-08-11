@@ -69,9 +69,37 @@ src/
 ------------------------------------------------------------
 🌐 Deploy
 ------------------------------------------------------------
-1. Construir:
-   npm run build
 
-2. Subir la carpeta /dist al hosting elegido (Vercel, Netlify, etc.).
+- **Producción (Vercel)**: 🔗[https://zoco-frontend-kohl.vercel.app/](https://zoco-frontend-kohl.vercel.app/)
 
-3. Configurar la variable de entorno VITE_API_URL en el panel del servicio con la URL del backend.
+### Construcción:
+
+```bash
+npm run build
+```
+
+Subir la carpeta `/dist` al hosting elegido (Vercel, Netlify, etc.).
+
+------------------------------------------------------------
+🚀 Deploy - Local
+------------------------------------------------------------
+
+### Cómo correrlo en local
+1. Clonar el repositorio:
+   ```bash
+   git clone <https://github.com/men7ar31/Zoco-frontend.git>
+   cd <Zoco-frontend>
+   ```
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+3. Crear archivo `.env` en la raíz con el contenido:
+   ```env
+   VITE_API_URL=http://localhost:5000/api
+   ```
+4. Levantar el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+5. Abrir en el navegador la URL que indique la consola (ej: http://localhost:5173)
