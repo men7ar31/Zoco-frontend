@@ -1,69 +1,75 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Zoco – Frontend
 
-Currently, two official plugins are available:
+Aplicación React + Vite + TypeScript + TailwindCSS para la gestión de usuarios, direcciones y estudios, con autenticación mediante JWT y roles (Admin / User).  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este frontend consume la API del backend de Zoco.
 
-## Expanding the ESLint configuration
+------------------------------------------------------------
+🚀 Requisitos previos
+------------------------------------------------------------
+- Node.js 18+
+- npm o yarn
+- Backend de Zoco corriendo localmente o en un servidor accesible.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+------------------------------------------------------------
+⚙️ Configuración del entorno
+------------------------------------------------------------
+1. Clonar este repositorio:
+   git clone https://github.com/TU_USUARIO/zoco-frontend.git
+   cd zoco-frontend
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Instalar dependencias:
+   npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+3. Crear un archivo .env en la raíz del proyecto con:
+   VITE_API_URL=http://localhost:5216/api
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   (Cambia la URL según dónde esté corriendo tu backend)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+------------------------------------------------------------
+🖥️ Scripts disponibles
+------------------------------------------------------------
+- Desarrollo  
+  npm run dev
+  Inicia el servidor de desarrollo en http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Compilar para producción  
+  npm run build
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Previsualizar build de producción  
+  npm run preview
+
+------------------------------------------------------------
+📂 Estructura del proyecto
+------------------------------------------------------------
+src/
+ ├── api/          # Configuración Axios para consumir la API
+ ├── components/   # Componentes UI reutilizables
+ ├── context/      # Contexto de autenticación
+ ├── pages/        # Vistas (Login, Addresses, Studies, Admin Users, etc.)
+ ├── styles/       # Estilos globales y Tailwind
+ └── main.tsx      # Punto de entrada
+
+------------------------------------------------------------
+🔑 Funcionalidades
+------------------------------------------------------------
+- Autenticación con JWT.
+- Roles: User y Admin.
+- Gestión de:
+  - Direcciones (CRUD + edición en línea)
+  - Estudios
+  - Usuarios (solo Admin)
+- Navbar responsive con diseño glassmorphism.
+- Tablas y formularios adaptados para móvil.
+- Integración con API REST del backend.
+
+------------------------------------------------------------
+🌐 Deploy
+------------------------------------------------------------
+1. Construir:
+   npm run build
+
+2. Subir la carpeta /dist al hosting elegido (Vercel, Netlify, etc.).
+
+3. Configurar la variable de entorno VITE_API_URL en el panel del servicio con la URL del backend.
