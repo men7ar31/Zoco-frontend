@@ -1,7 +1,6 @@
-/* src/index.css */
 @import "tailwindcss";
 
-/* tu fondo y clases glass… */
+
 @layer base {
   html { color-scheme: light; }
   body {
