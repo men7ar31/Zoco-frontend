@@ -1,5 +1,4 @@
-
-Zoco – Frontend
+#Zoco – Frontend
 
 Aplicación React + Vite + TypeScript + TailwindCSS para la gestión de usuarios, direcciones y estudios, con autenticación mediante JWT y roles (Admin / User).  
 
