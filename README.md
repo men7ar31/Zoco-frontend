@@ -42,13 +42,16 @@ Este frontend consume la API del backend de Zoco.
 ------------------------------------------------------------
 📂 Estructura del proyecto
 ------------------------------------------------------------
+```
 src/
- ├── api/          # Configuración Axios para consumir la API
- ├── components/   # Componentes UI reutilizables
- ├── context/      # Contexto de autenticación
- ├── pages/        # Vistas (Login, Addresses, Studies, Admin Users, etc.)
- ├── styles/       # Estilos globales y Tailwind
- └── main.tsx      # Punto de entrada
+ ├── api.ts         # Configuración Axios para consumir la API
+ ├── components/    # Componentes UI reutilizables
+ ├── context/       # Contexto de autenticación
+ ├── pages/         # Vistas (Login, Addresses, Studies, Admin Users, etc.)
+ ├── styles/        # Estilos globales y Tailwind
+ └── main.tsx       # Punto de entrada
+```
+
 
 ------------------------------------------------------------
 🔑 Funcionalidades
