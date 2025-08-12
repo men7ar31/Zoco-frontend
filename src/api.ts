@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API_URL = import.meta.env.VITE_API_URL;
-export const api = axios.create({ baseURL: `${API_URL}/api` });
+export const api = axios.create({ baseURL: `${API_URL}api` });
 
 api.interceptors.request.use((config) => {
   const token = sessionStorage.getItem("token");
