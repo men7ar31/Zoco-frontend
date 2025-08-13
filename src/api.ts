@@ -12,10 +12,13 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (res) => res,
   (err) => {
-    if (err?.response?.status === 401) {
+    const status = err?.response?.status;
+    if (status === 401) {
       sessionStorage.removeItem("token");
-      // opción simple:
       window.location.href = "/login";
+    }
+    if (status === 403) {
+      window.location.href = "/forbidden";
     }
     return Promise.reject(err);
   }

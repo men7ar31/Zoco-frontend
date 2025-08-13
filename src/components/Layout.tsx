@@ -17,7 +17,10 @@ export default function Layout({ children }: { children: ReactNode }) {
       <NavLink to="/studies" className={nav} onClick={close}>Studies</NavLink>
       <NavLink to="/addresses" className={nav} onClick={close}>Addresses</NavLink>
       {me?.role === "Admin" && (
-        <NavLink to="/admin/users" className={nav} onClick={close}>Users</NavLink>
+        <>
+    <NavLink to="/admin/users" className={nav} onClick={close}>Users</NavLink>
+    <NavLink to="/admin/session-logs" className={nav} onClick={close}>Session Logs</NavLink>
+  </>
       )}
     </>
   );
