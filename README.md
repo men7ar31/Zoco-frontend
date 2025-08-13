@@ -41,6 +41,11 @@ src/
 **Producción:**
 - Backend: https://zocoapp-dvg9crgygwhhbrep.brazilsouth-01.azurewebsites.net/
 - Frontend: https://zoco-frontend-kohl.vercel.app/
+- 
+## Capturas de pantalla
+En la carpeta `capturas de pantalla` de este repositorio se incluyen imágenes de ejemplo de:
+- Funcionalidades del sistema desde el frontend (vistas de Admin y User).
+- Pruebas de endpoints en Swagger (backend).
 
 
 🔐 Autenticación y estado
