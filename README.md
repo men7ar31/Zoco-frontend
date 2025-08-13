@@ -32,17 +32,16 @@ src/
   App.tsx                  # definición de rutas
   main.tsx
 
-🔧 Configuración
-Variables de entorno (Vite):
-- VITE_API_URL → URL base del backend (con / final). Ej.:
-  - Dev:  http://localhost:5216/
-  - Prod: https://<tu-api>.azurewebsites.net/
+## 🌐 Rutas
 
-Colocalas en:
-- .env.development:
-    VITE_API_URL=http://localhost:5216/
-- .env.production:
-    VITE_API_URL=https://<tu-api>.azurewebsites.net/
+**Desarrollo:**
+- Backend: http://localhost:5216/
+- Frontend: http://localhost:5173/
+
+**Producción:**
+- Backend: https://zocoapp-dvg9crgygwhhbrep.brazilsouth-01.azurewebsites.net/
+- Frontend: https://zoco-frontend-kohl.vercel.app/
+
 
 🔐 Autenticación y estado
 - El login llama POST /api/auth/login y guarda { token, user } en sessionStorage.
